@@ -1,13 +1,13 @@
 :root {
-  --title: #2e2f42;
-  --text: #434455;
-  --sub-text: #8e8f99;
+  --text: #111111;
+  --alt-text: #8e8f99;
   --alt-title: #ffffff;
-  --alt-text: #f4f4fd;
+  --highlight: #fd9222;
+  --bg-light: #fafafa;
+  --bg-dark: #1e1823;
 }
 
 [data-theme='dark'] {
-  --title: var(--alt-title);
   --text: var(--alt-text);
 }
 

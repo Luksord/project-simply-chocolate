@@ -1,0 +1,337 @@
+.section {
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  padding: 72px 0;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+    padding: 128px 0;
+  }
+}
+
+.componentsFlexBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 335px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .componentsFlexBox {
+    min-width: 290px;
+  }
+}
+
+.title {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 24px;
+  max-width: 283px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .title {
+    max-width: 290px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: -0.72px;
+    margin-bottom: 28px;
+    max-width: 400px;
+  }
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.text {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  font-style: normal;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 300px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .text {
+    max-width: 290px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .text {
+    margin-bottom: 50px;
+    width: 450px;
+  }
+}
+
+.uniqueComponentsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .uniqueComponentsList {
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .uniqueComponentsList {
+    gap: 19px;
+  }
+}
+
+.flipCard {
+  background-color: transparent;
+  width: 335px;
+  height: 270px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  align-items: center;
+  overflow: visible;
+  perspective: 2000px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .flipCard {
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Chocolate */
+  .flipCard:nth-child(1) {
+    order: 0;
+  }
+  /* Milk */
+  .flipCard:nth-child(2) {
+    order: 1;
+  }
+  /* Nuts */
+  .flipCard:nth-child(3) {
+    order: 2;
+  }
+  /* Raisins */
+  .flipCard:nth-child(4) {
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flipCard {
+    width: 270px;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background: var(--bg-light);
+  border-radius: 15px;
+  border: 1px solid var(--highlight);
+  color: var(--textr);
+  padding: 28px;
+}
+
+.uniqueComponentsLink {
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 1200px) {
+  img {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .imgDesktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .imgMobile {
+    display: none;
+  }
+}
+
+.highlightBorder {
+  border-color: var(--text);
+}
+
+.componentName {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.28px;
+  text-transform: uppercase;
+}
+
+/* Style the back side */
+.flipCardBack {
+  background: var(--bg-light);
+  color: var(--text);
+  transform: rotateY(180deg);
+  border-radius: 15px;
+  border: 1px solid var(--highlight);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .flipCardBack {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flipCardBack {
+    display: block;
+  }
+}
+
+.overlayName {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.overlayTags {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlayTagContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px;
+  gap: 4px;
+  border-radius: 35px;
+  border: 1px solid var(--highlight);
+  background: var(--bg-light);
+}
+
+.overlayTag {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 120% */
+}
+
+.overlayParagraph {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: -0.28px;
+  width: 275px;
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .overlayParagraph {
+    max-width: 240px;
+  }
+  .overflowEllipsis {
+    display: block;
+    text-wrap: wrap;
+    width: 240px;
+    height: 20px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .overflowellipsis:hover {
+    overflow-x: visible;
+    white-space: normal;
+    text-overflow: '';
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay-overlayParagraph {
+    width: 230px;
+    height: 140px;
+  }
+  .overflowEllipsis {
+    display: block;
+    text-wrap: wrap;
+    width: 220px;
+    height: 20px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .overflowEllipsis:hover {
+    overflow-x: visible;
+    white-space: normal;
+    text-overflow: '';
+  }
+}

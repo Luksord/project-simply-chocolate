@@ -3,16 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 100px 0;
+  padding: 62px 0;
 }
-
-.title {
-}
-
-.link {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 600;
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 80px 0;
+  }
 }
