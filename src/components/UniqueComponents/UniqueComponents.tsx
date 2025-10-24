@@ -93,26 +93,24 @@ const advantages: AdvantageProps[] = [
 export const UniqueComponents = () => {
   return (
     <section className={css.section}>
-      <div className={css.componentsFlexBox}>
-        <h2 className={css.title}>
-          IT ALL ADDS UP TO ONE EXCEPTIONAL{' '}
-          <span className={css.highlight}>TASTE</span> SENSATION
-        </h2>
-        <p className={css.text}>
-          At Simply Chocolate, we believe that the secret to exceptional
-          chocolate is in the details. From the sourcing of the finest
-          ingredients to the careful crafting of each individual piece, every
-          step of our process adds up to one exceptional taste sensation.
-        </p>
-      </div>
+      <h2 className={css.title}>
+        IT ALL ADDS UP TO ONE EXCEPTIONAL{' '}
+        <span className={css.highlight}>TASTE</span> SENSATION
+      </h2>
+      <p className={css.text}>
+        At Simply Chocolate, we believe that the secret to exceptional chocolate
+        is in the details. From the sourcing of the finest ingredients to the
+        careful crafting of each individual piece, every step of our process
+        adds up to one exceptional taste sensation.
+      </p>
 
-      <ul className={css.uniqueComponentsList}>
+      <ul className={css.componentsList}>
         {advantages.map(
           ({ images, alt, name, tags, description, background, color }, i) => (
-            <li key={i} className={css.flipCard}>
-              <div className={css.flipCardInner}>
+            <li key={i} className={css.listItem}>
+              <div className={css.flipCard}>
                 <div
-                  className={`${css.flipCardFront} ${
+                  className={`${css.frontside} ${
                     name === 'Nuts' ? css.highlightBorder : ''
                   }`}
                   style={{
@@ -144,7 +142,7 @@ export const UniqueComponents = () => {
                   </p>
                 </div>
 
-                <div className={css.flipCardBack}>
+                <div className={css.backside}>
                   <h3 className={css.overlayName}>{name}</h3>
                   <ul className={css.overlayTags}>
                     {tags.map((tag, index) => (

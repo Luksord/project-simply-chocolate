@@ -1,0 +1,131 @@
+.section {
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  padding: 36px 0;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+    padding: 50px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+    padding: 64px 0;
+  }
+}
+
+.title {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-dark);
+  background-image: image-set(
+    url('../../assets/images/how-its-made-mob@1x.png') 1x,
+    url('../../assets/images/how-its-made-mob@2x.png') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 335px;
+  height: 500px;
+  border-radius: 15px;
+  border-style: hidden;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .video {
+    width: 614px;
+    height: 400px;
+    background-image: image-set(
+      url('../../assets/images/how-its-made-tab@1x.png') 1x,
+      url('../../assets/images/how-its-made-tab@2x.png') 2x
+    );
+  }
+}
+@media screen and (min-width: 1200px) {
+  .video {
+    width: 600px;
+    background-image: image-set(
+      url('../../assets/images/how-its-made-desk@1x.png') 1x,
+      url('../../assets/images/how-its-made-desk@2x.png') 2x
+    );
+  }
+}
+
+.container {
+  background-color: var(--alt-title);
+  border-radius: 15px;
+  width: 335px;
+  padding: 20px 14px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 614px;
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 516px;
+  }
+}
+
+.text {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .text {
+    width: 350px;
+    margin-bottom: 28px;
+  }
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  list-style-position: inside;
+  list-style-type: disc;
+  gap: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .flexbox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
