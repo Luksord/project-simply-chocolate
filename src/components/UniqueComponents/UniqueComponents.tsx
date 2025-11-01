@@ -127,12 +127,7 @@ export const UniqueComponents = () => {
                       srcSet={`${images.mobile} 1x, ${images.mobile2x} 2x`}
                       media="(max-width: 1199px)"
                     />
-                    <img
-                      src={images.mobile}
-                      alt={alt}
-                      width="224"
-                      height="171"
-                    />
+                    <img src={images.mobile} alt={alt} className={css.image} />
                   </picture>
                   <p
                     className={css.componentName}

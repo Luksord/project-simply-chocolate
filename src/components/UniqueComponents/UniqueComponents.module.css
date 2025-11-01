@@ -171,11 +171,13 @@
   list-style: none;
 }
 
-img {
+.image {
+  width: 224px;
+  height: 171px;
   margin-bottom: 25px;
 }
 @media screen and (min-width: 1200px) {
-  img {
+  .image {
     margin-bottom: 36px;
   }
 }

@@ -1,0 +1,122 @@
+.section {
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  padding: 36px 20px 72px 20px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+    padding: 50px 32px 100px 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+    padding: 64px 32px 128px 32px;
+  }
+}
+
+.title {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .commentsList {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .commentsList {
+    gap: 28px;
+  }
+}
+
+.listItem {
+}
+
+.commentContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--alt-title);
+  border: 1px solid #0000001a;
+  border-radius: 15px;
+  width: 335px;
+  padding: 56px 18px 42px 18px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+
+.name {
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.comment {
+  color: var(--alt-text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.button {
+  background: var(--alt-title);
+  border: 1px solid var(--highlight);
+  border-radius: 35px;
+  padding: 12px 28px;
+  cursor: pointer;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+}
+
+.button:hover {
+  background: var(--highlight);
+  color: var(--alt-title);
+}

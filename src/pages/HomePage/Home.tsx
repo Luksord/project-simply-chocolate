@@ -4,6 +4,9 @@ import { Hero } from '../../components/Hero/Hero';
 import { Advantages } from '../../components/Advantages/Advantages';
 import { UniqueComponents } from '../../components/UniqueComponents/UniqueComponents';
 import { HowItsMade } from '../../components/HowItsMade/HowItsMade';
+import { OurProducts } from '../../components/OurProducts/OurProducts';
+import { TopSellers } from '../../components/TopSellers/TopSellers';
+import { Comments } from '../../components/Comments/Comments';
 
 export const Home = () => {
   return (
@@ -14,6 +17,9 @@ export const Home = () => {
         <Advantages />
         <UniqueComponents />
         <HowItsMade />
+        <OurProducts />
+        <TopSellers />
+        <Comments />
       </div>
     </>
   );
