@@ -69,24 +69,34 @@
   .navList {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+  .navItem {
+    color: var(--text);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    gap: 24px;
+    text-decoration: none;
     cursor: pointer;
+  }
+  .navItem:hover {
+    color: var(--highlight);
+    transition: all 0.3s ease;
   }
   .mediaContainer {
     display: flex;
     gap: 18px;
   }
   .socialIcon {
+    color: var(--text);
     width: 24px;
     height: 24px;
     cursor: pointer;
   }
-  .socialIcon:focus {
-    color: var(----highlight);
-    transition: all 0.3s ease;
+  .socialIcon:hover {
+    color: var(--highlight);
+    transition: color 0.3s ease;
   }
 }
 

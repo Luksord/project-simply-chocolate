@@ -41,8 +41,19 @@
 
 .commentsList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+.productsList::-webkit-scrollbar {
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .commentsList {
@@ -56,6 +67,22 @@
 }
 
 .listItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .listItem {
+    flex: 0 0 calc(50% - 16px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .listItem {
+    flex: 0 0 calc(33.333% - 20px);
+  }
 }
 
 .commentContainer {
@@ -65,9 +92,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--alt-title);
-  border: 1px solid #0000001a;
+  border: 1px solid var(--border);
   border-radius: 15px;
-  width: 335px;
+  width: 100%;
+  max-width: 335px;
+  height: 200px;
   padding: 56px 18px 42px 18px;
   margin-top: 40px;
   text-align: center;
@@ -76,7 +105,7 @@
 .avatar {
   position: absolute;
   top: 0;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   width: 80px;
   height: 80px;
 }
@@ -97,7 +126,7 @@
 }
 
 .button {
-  background: var(--alt-title);
+  background-color: transparent;
   border: 1px solid var(--highlight);
   border-radius: 35px;
   padding: 12px 28px;
@@ -106,8 +135,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  transition: background 0.3s ease;
-  margin-top: 32px;
+  transition: all 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -117,6 +145,41 @@
 }
 
 .button:hover {
-  background: var(--highlight);
+  background-color: var(--highlight);
   color: var(--alt-title);
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.slider {
+  background-color: var(--border);
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.slider:hover {
+  cursor: pointer;
+}
+
+.slider:active,
+.slider.active {
+  background-color: var(--highlight);
+  width: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .active {
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
+    transition: border 0.3s ease;
+  }
 }

@@ -1,0 +1,125 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(17, 17, 17, 0.6);
+  z-index: 999;
+}
+
+.show {
+  display: flex;
+}
+
+.modalContent {
+  position: relative;
+  background-color: var(--bg-light);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 310px;
+  padding: 32px 24px;
+}
+@media screen and (min-width: 768px) {
+  .modalContent {
+    width: 540px;
+    padding: 40px;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .closeBtn {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.title {
+  color: var(--text);
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media screen and (min-width: 768px) {
+  .formContainer {
+    align-items: flex-start;
+  }
+}
+
+.input,
+.textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .input,
+  .textarea {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+}
+
+.textarea {
+  margin-bottom: 18px;
+  height: 90px;
+}
+@media screen and (min-width: 768px) {
+  .textarea {
+    height: 135px;
+  }
+}
+
+.sendBtn {
+  background-color: var(--highlight);
+  border-radius: 35px;
+  border: none;
+  color: var(--alt-title);
+  padding: 12px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .sendBtn {
+    padding: 14px 40px;
+  }
+}

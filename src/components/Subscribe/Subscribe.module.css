@@ -1,0 +1,88 @@
+.section {
+  background-color: var(--bg-light);
+  width: 375px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+  }
+}
+
+.heroContainer {
+  width: 100%;
+  padding: 62px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark);
+  background-image: image-set(url('../../assets/images/subscribe-bg.jpg') 1x);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .heroContainer {
+    padding: 72px 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heroContainer {
+    padding: 72px 365px;
+  }
+}
+
+.title {
+  color: var(--alt-title);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+    width: 375px;
+  }
+}
+
+.text {
+  color: var(--alt-title);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--alt-title);
+  border-radius: 100px;
+  padding: 12px 28px;
+  cursor: pointer;
+  color: var(--alt-title);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+}
+
+.button:hover {
+  background-color: var(--highlight);
+  border: 1px solid var(--highlight);
+}

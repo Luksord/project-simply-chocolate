@@ -5,18 +5,18 @@
   justify-content: center;
   align-items: center;
   width: 375px;
-  padding: 36px 0;
+  padding: 36px 20px;
 }
 @media screen and (min-width: 768px) {
   .section {
     width: 768px;
-    padding: 50px 0;
+    padding: 50px 32px;
   }
 }
 @media screen and (min-width: 1200px) {
   .section {
     width: 1200px;
-    padding: 64px 0;
+    padding: 64px 32px;
   }
 }
 
@@ -39,13 +39,29 @@
   color: var(--highlight);
 }
 
-.flexbox {
-}
-
 .productsList {
   display: flex;
-  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 18px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.productsList::-webkit-scrollbar {
+  display: none;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* pozwala przewijać listę bez psucia layoutu */
 }
 
 .listItem {
@@ -54,15 +70,17 @@
   justify-content: center;
   align-items: center;
   background-color: var(--alt-title);
-  border: 1px solid #0000001a;
+  border: 1px solid var(--border);
   border-radius: 15px;
-  width: 335px;
+  max-width: 335px;
   padding: 32px 52px;
+  flex: 0 0 80%;
+  scroll-snap-align: center;
 }
 @media screen and (min-width: 768px) {
   .listItem {
-    width: 270px;
-    padding: 32px 20px;
+    max-width: 270px;
+    flex: 0 0 35%; /* na tabletach pokaż np. 2–3 produkty naraz */
   }
 }
 
@@ -91,7 +109,7 @@
 
 .price {
   background-color: var(--bg-light);
-  border: 1px solid #0000001a;
+  border: 1px solid var(--border);
   border-radius: 100px;
   padding: 8px 20px;
   color: var(--text);
@@ -99,4 +117,39 @@
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.slider {
+  background-color: var(--border);
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.slider:hover {
+  cursor: pointer;
+}
+
+.slider:active,
+.slider.active {
+  background-color: var(--highlight);
+  width: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .active {
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
+    transition: border 0.3s ease;
+  }
 }

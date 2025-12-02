@@ -11,7 +11,7 @@ export const HowItsMade = () => {
           className={css.video}
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/oWjlmi9bbQA"
+          src="https://www.youtube.com/embed/oWjlmi9bbQA?controls=0&modestbranding=1&rel=0&showinfo=0"
           title="YouTube video player"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -87,6 +87,11 @@
   transition: all 0.3s ease;
 }
 
+.link {
+  color: var(--alt-title);
+  text-decoration: none;
+}
+
 .btn:hover {
   background-color: var(--highlight);
   border: 1px solid var(--highlight);
@@ -120,6 +125,7 @@
   height: 28px;
   border: none;
   border-radius: 50%;
+  text-decoration: none;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
