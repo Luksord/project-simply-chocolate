@@ -67,13 +67,13 @@ export const UniqueComponents = () => {
 
                 {/* ---------- BACKSIDE ---------- */}
                 <div className={css.backside}>
-                  <h3 className={css.overlayName}>{name}</h3>
+                  <h3 className={css.backsideName}>{name}</h3>
 
-                  <ul className={css.overlayTags}>
+                  <ul className={css.tagsList}>
                     {tags.map((tag, index) => (
                       <li
                         key={index}
-                        className={`${css.overlayTagContainer} ${
+                        className={`${css.tagContainer} ${
                           activeTab[i] === index ? css.activeTag : ''
                         }`}
                         onClick={() =>
@@ -85,12 +85,12 @@ export const UniqueComponents = () => {
                         }
                         style={{ cursor: 'pointer' }}
                       >
-                        <p className={css.overlayTag}>{tag}</p>
+                        <p className={css.tag}>{tag}</p>
                       </li>
                     ))}
                   </ul>
 
-                  <p className={css.overlayParagraph}>
+                  <p className={css.backsideText}>
                     {activeTab[i] === 0 ? description : benefits.join(', ')}
                   </p>
                 </div>

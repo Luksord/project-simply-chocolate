@@ -134,7 +134,6 @@
   }
 }
 
-/* This container is needed to position the front and back side */
 .flipCard {
   position: relative;
   width: 100%;
@@ -143,23 +142,20 @@
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .listItem:hover .flipCard {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .frontside,
 .backside {
   position: absolute;
   width: 100%;
   min-height: 270px;
   height: auto;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .frontside {
   background: var(--bg-light);
   border-radius: 15px;
@@ -208,17 +204,15 @@
   border-color: var(--text);
 }
 
-.componentName {
+.componentName,
+.backsideName {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  line-height: 18px;
-  letter-spacing: -0.28px;
   text-transform: uppercase;
 }
 
-/* Style the back side */
 .backside {
   background: var(--bg-light);
   color: var(--text);
@@ -242,26 +236,19 @@
   }
 }
 
-.overlayName {
-  color: var(--text);
-  font-family: 'Montserrat', sans-serif;
+.backsideName {
   font-size: 18px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.54px;
-  text-transform: uppercase;
-  text-align: left;
   margin-bottom: 8px;
 }
 
-.overlayTags {
+.tagsList {
   display: flex;
   flex-direction: row;
   gap: 6px;
   margin-bottom: 14px;
 }
 
-.overlayTagContainer {
+.tagContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,13 +259,13 @@
   background: var(--bg-light);
 }
 
-.overlayTag {
+.tag {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 12px; /* 120% */
+  line-height: 12px;
 }
 
 .activeTag {
@@ -290,51 +277,17 @@
   color: var(--alt-title) !important;
 }
 
-.overlayParagraph {
+.backsideText {
   color: var(--text);
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 128.571% */
+  line-height: 18px;
   letter-spacing: -0.28px;
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
-  .overlayParagraph {
+  .backsideText {
     max-width: 240px;
-  }
-  .overflowEllipsis {
-    display: block;
-    text-wrap: wrap;
-    height: 20px;
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .overflowellipsis:hover {
-    overflow-x: visible;
-    white-space: normal;
-    text-overflow: '';
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .overlay-overlayParagraph {
-    width: 230px;
-    height: 140px;
-  }
-  .overflowEllipsis {
-    display: block;
-    text-wrap: wrap;
-    width: 220px;
-    height: 20px;
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .overflowEllipsis:hover {
-    overflow-x: visible;
-    white-space: normal;
-    text-overflow: '';
   }
 }
